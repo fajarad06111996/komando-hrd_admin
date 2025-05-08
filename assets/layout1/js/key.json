@@ -1,0 +1,12 @@
+{
+    "firebaseConfig": {
+        "apiKey"            : "AIzaSyCoR8XQr6YwMLTyPq8ABc5FppBTXkc60BE",
+        "authDomain"        : "first-discovery-401904.firebaseapp.com",
+        "projectId"         : "first-discovery-401904",
+        "storageBucket"     : "first-discovery-401904.appspot.com",
+        "messagingSenderId" : "213831062450",
+        "appId"             : "1:213831062450:web:289159c02cf68fd4378aab",
+        "measurementId"     : "G-DWM1NGGK9F"
+    }
+}
+

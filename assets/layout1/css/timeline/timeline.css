@@ -1,0 +1,281 @@
+.containerx {
+  max-width: 650px;
+
+  margin: 50px auto;
+}
+
+.timelinex-end {
+  position: relative;
+
+  padding-left: 4rem;
+
+  margin: 0 0 0 30px;
+
+  color: white;
+  z-index: 9;
+}
+
+.timelinex-end .timelinex-container {
+  position: relative;
+
+  padding-bottom: 2.5rem;
+}
+
+.timelinex-end .timelinex-container .timelinex-icon {
+  position: absolute;
+
+  left: -86px;
+
+  top: -4px;
+
+  width: 50px;
+
+  height: 50px;
+
+  border-radius: 50%;
+
+  text-align: center;
+
+  font-size: 2rem;
+
+  background: #4f537b;
+}
+
+.timelinex-end .timelinex-container .timelinex-icon i {
+  position: absolute;
+
+  left: 50%;
+
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+}
+
+.timelinex {
+  position: relative;
+
+  padding-left: 4rem;
+
+  margin: 0 0 0 30px;
+
+  color: white;
+}
+
+.timelinex:before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+
+  bottom: 40px;
+
+  width: 4px;
+
+  height: 100%;
+
+  background: #27293d;
+}
+
+.timelinex .timelinex-container {
+  position: relative;
+
+  padding-bottom: 2.5rem;
+}
+
+.timelinex .timelinex-container .timelinex-icon {
+  position: absolute;
+
+  left: -86px;
+
+  bottom: 40px;
+
+  width: 50px;
+
+  height: 50px;
+
+  border-radius: 50%;
+
+  text-align: center;
+
+  font-size: 2rem;
+
+  background: #4f537b;
+}
+
+.timelinex .timelinex-container .timelinex-icon i {
+  position: absolute;
+
+  left: 50%;
+
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+}
+
+.timelinex .timelinex-container .timelinex-icon img {
+  width: 100%;
+
+  height: 100%;
+
+  border-radius: 50%;
+}
+
+.timelinex .timelinex-container .timelinex-body {
+  background: #27293d;
+
+  border-radius: 3px;
+
+  padding: 20px 20px 15px;
+
+  box-shadow: 1px 3px 9px rgba(0, 0, 0, 0.1);
+}
+
+.timelinex .timelinex-container .timelinex-body:before {
+  content: "";
+
+  background: inherit;
+
+  width: 20px;
+
+  height: 20px;
+
+  display: block;
+
+  position: absolute;
+
+  left: -10px;
+
+  transform: rotate(45deg);
+
+  border-radius: 0 0 0 2px;
+  bottom: 54px;
+}
+
+.timelinex .timelinex-container .timelinex-body .timelinex-title {
+  margin-bottom: 1.4rem;
+}
+
+.timelinex .timelinex-container .timelinex-body .timelinex-title .badge {
+  padding: 4px 8px;
+
+  border-radius: 3px;
+
+  font-size: 12px;
+
+  font-weight: bold;
+}
+
+.timelinex .timelinex-container .timelinex-body .timelinex-subtitle {
+  font-weight: 300;
+
+  font-style: italic;
+
+  opacity: 0.4;
+
+  margin-top: 16px;
+
+  font-size: 11px;
+}
+
+.timelinex .timelinex-container.primary .badge-primary,
+.timelinex .timelinex-container.primary .timelinex-icon,
+.timelinex-end .timelinex-container.primary .timelinex-icon {
+  background: #1d8cf8 !important;
+}
+
+.timelinex .timelinex-container.info .badge-info,
+.timelinex .timelinex-container.info .timelinex-icon,
+.timelinex-end .timelinex-container.info .timelinex-icon {
+  background: #329aad !important;
+}
+
+.timelinex .timelinex-container.success .badge-success,
+.timelinex .timelinex-container.success .timelinex-icon,
+.timelinex-end .timelinex-container.success .timelinex-icon {
+  background: #01a91d !important;
+}
+
+.timelinex .timelinex-container.warning .badge-warning,
+.timelinex .timelinex-container.warning .timelinex-icon,
+.timelinex-end .timelinex-container.warning .timelinex-icon {
+  background: #ddc80d !important;
+}
+
+.timelinex .timelinex-container.danger .badge-danger,
+.timelinex .timelinex-container.danger .timelinex-icon,
+.timelinex-end .timelinex-container.danger .timelinex-icon {
+  background: #e01f12 !important;
+}
+
+.timelinex .timelinex-container.secondary .badge-secondary,
+.timelinex .timelinex-container.secondary .timelinex-icon,
+.timelinex-end .timelinex-container.secondary .timelinex-icon {
+  background: #7c7c7c !important;
+}
+
+.timelinex .timelinex-container.dark .badge-dark,
+.timelinex .timelinex-container.dark .timelinex-icon,
+.timelinex-end .timelinex-container.dark .timelinex-icon {
+  background: #0f0f0f !important;
+}
+
+.authorx {
+  font-family: inherit;
+
+  padding: 3em;
+
+  text-align: center;
+
+  width: 100%;
+
+  color: white;
+}
+
+.authorx a:link,
+.authorx a:visited {
+  color: white;
+}
+
+.authorx a:link:hover,
+.authorx a:visited:hover {
+  text-decoration: none;
+}
+
+.authorx .btn:link,
+.authorx .btn:visited {
+  margin-top: 1em;
+
+  text-decoration: none;
+
+  display: inline-block;
+
+  font-family: inherit;
+
+  font-weight: 100;
+
+  color: white;
+
+  text-align: center;
+
+  vertical-align: middle;
+
+  user-select: none;
+
+  background-color: black;
+
+  padding: 1.5em 2rem;
+
+  border-radius: 1em;
+
+  transition: 0.5s all;
+}
+
+.authorx .btn:link:hover,
+.authorx .btn:link:focus,
+.authorx .btn:link:active,
+.authorx .btn:visited:hover,
+.authorx .btn:visited:focus,
+.authorx .btn:visited:active {
+  background-color: #1a1a1a;
+}

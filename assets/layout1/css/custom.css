@@ -1,0 +1,40 @@
+.z10000 {
+    z-index: 10000 !important;
+}
+
+@media (max-width: 991px) {
+    .col-lg-show {
+        display: none;
+    }
+}
+
+@font-face {
+	font-family: "Glyphicons Halflings";
+	src: url(../css/fonts/glyphicons-halflings-regular.eot);
+	src: url(../css/fonts/glyphicons-halflings-regular.eot?#iefix)
+			format("embedded-opentype"),
+		url(../css/fonts/glyphicons-halflings-regular.woff2) format("woff2"),
+		url(../css/fonts/glyphicons-halflings-regular.woff) format("woff"),
+		url(../css/fonts/glyphicons-halflings-regular.ttf) format("truetype"),
+		url(https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular)
+			format("svg");
+}
+.glyphicon {
+	position: relative;
+	top: 1px;
+	display: inline-block;
+	font-family: "Glyphicons Halflings";
+	font-style: normal;
+	font-weight: 400;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.glyphicon-minus:before {
+	content: "\2212";
+}
+
+.glyphicon-plus:before {
+	content: "\2b";
+}
