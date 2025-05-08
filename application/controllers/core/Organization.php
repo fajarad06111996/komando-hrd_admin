@@ -21,6 +21,7 @@ class Organization extends AUTH_Controller
     }
     public function index()
     {
+        $data['contohgit'] = 'asdfasdf';
         $access = $this->security_function->permissions($this->filename . "-r");
         if (empty($access)) die("<center><h1>You can not get the right to access this module</h1></center>");
         if(!empty($this->security_function->permissions($this->filename . "-w"))){
