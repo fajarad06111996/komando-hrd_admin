@@ -45,7 +45,7 @@
 				<h3 class="modal-title" id="exampleModalLabel">Alert !!!</h3>
 			</div>
 			<div class="modal-body text-justify">
-        		<h6 class="font-weight-semibold text-center"><span class="infoDelete"></span>, Yakin Mau Dihapus ?</h6>
+				<h6 class="font-weight-semibold text-center"><span class="infoDelete"></span>, Yakin Mau Dihapus ?</h6>
 			</div>
 			<div class="modal-footer">
 				<button type="button" data-dismiss="modal" class="btn btn-default">Tidak</button>
@@ -61,7 +61,7 @@
 				<h3 class="modal-title" id="exampleModalLabel">Alert !!!</h3>
 			</div>
 			<div class="modal-body text-justify p-1">
-        		<h6 class="font-weight-semibold text-center"><span class="infoDelete"></span>, Yakin Mau Dihapus ?</h6>
+				<h6 class="font-weight-semibold text-center"><span class="infoDelete"></span>, Yakin Mau Dihapus ?</h6>
 			</div>
 			<div class="modal-footer p-1">
 				<button type="button" data-dismiss="modal" class="btn btn-default">Tidak</button>
@@ -77,7 +77,7 @@
 				<h3 class="modal-title" id="exampleModalLabel">Alert !!!</h3>
 			</div>
 			<div class="modal-body text-justify p-1">
-        		<p class="font-weight-semibold text-center"><span class="infoDialog"></span></p>
+				<p class="font-weight-semibold text-center"><span class="infoDialog"></span></p>
 			</div>
 			<div class="card-footer p-1">
 				<div class="d-flex justify-content-between align-items-center ">
@@ -97,29 +97,92 @@
 				<button type="button" class="close" data-dismiss="modal">&times;</button>
 			</div>
 			<form action="" id="stateForm" class="form-horizontal f-validasi" method="post">
-                <div class="row">
-                    <div class="col-md-12 added">
+				<div class="row">
+					<div class="col-md-12 added">
 						<?= csrf_input(); ?>
-                        <input type="hidden" name="tId" value="" />
-                        <input type="hidden" name="tClCode" value="" />
-                        <input type="hidden" name="tClId" value="" />
-                        <p class="text-center mt-3 mb-0 tContent"></p>
-                    </div>
-                    <div class="col-md-12">
-                        <p class="text-center text-info"><b class="tName"></b></p>
-                    </div>
-                </div>
-			    <div class="card-footer">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <button type="button" data-dismiss="modal" class="btn btn-outline-secondary">Close</button>
-                        <button type="submit" class="btn btn-danger btn-ladda btn-ladda-spinner tBtn" data-spinner-color="#333" data-style="slide-down">Save changes</button>
-                    </div>
+						<input type="hidden" name="tId" value="" />
+						<input type="hidden" name="tClCode" value="" />
+						<input type="hidden" name="tClId" value="" />
+						<p class="text-center mt-3 mb-0 tContent"></p>
+					</div>
+					<div class="col-md-12">
+						<p class="text-center text-info"><b class="tName"></b></p>
+					</div>
+				</div>
+				<div class="card-footer">
+					<div class="d-flex justify-content-between align-items-center">
+						<button type="button" data-dismiss="modal" class="btn btn-outline-secondary">Close</button>
+						<button type="submit" class="btn btn-danger btn-ladda btn-ladda-spinner tBtn" data-spinner-color="#333" data-style="slide-down">Save changes</button>
+					</div>
 				</div>
 			</form>
 		</div>
 	</div>
 </div>
 <!--End Modal change status-->
+
+<!--Modal ACC Ijin Kerja-->
+<div id="xWorkPermission" data-backdrop="static" data-keyboard="false" class="modal fade">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header pt-2 pb-2 bg-blue-700">
+				<h4 class="modal-title"></h4>
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+			</div>
+			<form action="" id="workPermissionForm" class="form-horizontal f-validasi" method="post">
+				<div class="modal-body">
+					<div class="col-md-12 added">
+						<?= csrf_input(); ?>
+						<input type="text" name="id" value="" />
+						<p class="text-center mt-3 mb-0 tContent"></p>
+						<div class="row justify-content-center">
+							<div class="col-sm-12">
+								<div class="form-group row mb-1">
+									<label class="col-form-label col-sm-3 text-uppercase text-right">Nama</label>
+									<div class="col-md-9">
+										<input name="employee_name" type="text" readonly placeholder="Nama Jabatan" class="form-control form-control-sm">
+									</div>
+								</div>
+								<div class="form-group row mb-1">
+									<label class="col-form-label col-sm-3 text-uppercase text-right">Tanggal</label>
+									<div class="col-md-9">
+										<input name="date" type="text" readonly placeholder="Nama Jabatan" class="form-control form-control-sm">
+									</div>
+								</div>
+								<div class="form-group row mb-1">
+									<label class="col-form-label col-sm-3 text-uppercase text-right">Keterangan</label>
+									<div class="col-md-9">
+										<textarea name="remarks" class="form-control form-control-sm" readonly></textarea>
+										<!-- <input name="remarks" type="text" readonly placeholder="Nama Jabatan" class="form-control form-control-sm"> -->
+									</div>
+								</div>
+								<hr>
+								<div class="form-group row mb-1">
+									<label class="col-form-label col-sm-3 text-uppercase text-right">Jika Ditolak<b class="text-danger">*</b></label>
+									<div class="col-md-9">
+										<input name="remarks_rejected" type="text" placeholder="Alasan jika ijin ditolak" class="form-control form-control-sm">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- <div class="col-md-12">
+						<p class="text-center text-info"><b class="tName"></b></p>
+					</div> -->
+				</div>
+				<div class="card-footer">
+					<div class="d-flex justify-content-between align-items-center">
+						<button data-dismiss="modal" class="btn btn-outline-secondary">Tutup</button>
+						<button class="btn btn-danger btn-ladda btn-ladda-spinner tBtnReject" data-spinner-color="#333" data-style="slide-down">Tolak Ijin</button>
+						<button class="btn btn-success btn-ladda btn-ladda-spinner tBtnAccept" data-spinner-color="#333" data-style="slide-down">Ya Acc</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+<!--End Modal ACC Ijin Kerja-->
+
 <!--Modal choose feature-->
 <div id="xFeature" data-backdrop="static" data-keyboard="false" class="modal fade">
 	<div class="modal-dialog">
@@ -150,7 +213,8 @@
 				<h4 class="modal-title"></h4>
 				<button type="button" class="close" data-dismiss="modal">&times;</button>
 			</div>
-			<?php //var_dump($origin_office); ?>
+			<?php //var_dump($origin_office); 
+			?>
 			<form action="" id="companyChangeForm" class="form-horizontal" method="post">
 				<div class="modal-body">
 					<div class="form-group row mb-1">
@@ -158,20 +222,20 @@
 						<label class="col-form-label col-sm-4 text-dark">SELECT COMPANY<b class="text-danger">*</b></label>
 						<div class="col-md-6">
 							<!-- <select name="tUname" data-placeholder="Select a Level" class="form-control form-control-sm" required> -->
-							<select name="get_company" data-placeholder="Select a Compnay" class="form-control form-control-sm select-search"  data-container-css-class="select-sm" data-fouc  required>
+							<select name="get_company" data-placeholder="Select a Compnay" class="form-control form-control-sm select-search" data-container-css-class="select-sm" data-fouc required>
 								<option value=""></option>
 								<?php foreach ($companyList as $z) { ?>
-								<option value="<?= $this->secure->enc($z->idx); ?>" ><?= $z->company_name; ?></option>
+									<option value="<?= $this->secure->enc($z->idx); ?>"><?= $z->company_name; ?></option>
 								<?php } ?>
 							</select>
 						</div>
 					</div>
 				</div>
-			    <div class="card-footer">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <button type="button" data-dismiss="modal" class="btn btn-outline-secondary">Close</button>
-                        <button type="submit" class="btn btn-info btn-ladda btn-ladda-spinner tBtn" data-spinner-color="#333" data-style="slide-down">changes Company</button>
-                    </div>
+				<div class="card-footer">
+					<div class="d-flex justify-content-between align-items-center">
+						<button type="button" data-dismiss="modal" class="btn btn-outline-secondary">Close</button>
+						<button type="submit" class="btn btn-info btn-ladda btn-ladda-spinner tBtn" data-spinner-color="#333" data-style="slide-down">changes Company</button>
+					</div>
 				</div>
 			</form>
 		</div>
@@ -186,7 +250,8 @@
 				<h4 class="modal-title"></h4>
 				<button type="button" class="close" data-dismiss="modal">&times;</button>
 			</div>
-			<?php //var_dump($origin_office); ?>
+			<?php //var_dump($origin_office); 
+			?>
 			<form action="" id="counterForm" class="form-horizontal" method="post">
 				<div class="modal-body">
 					<div class="form-group row mb-1">
@@ -194,20 +259,24 @@
 						<label class="col-form-label col-sm-4 text-dark text-right">SELECT COUNTER <b class="text-danger">*</b></label>
 						<div class="col-md-6">
 							<!-- <select name="tUname" data-placeholder="Select a Level" class="form-control form-control-sm" required> -->
-							<select name="get_counter" data-placeholder="Select a Counter" class="form-control form-control-sm select-search"  data-container-css-class="select-sm" data-fouc  required>
+							<select name="get_counter" data-placeholder="Select a Counter" class="form-control form-control-sm select-search" data-container-css-class="select-sm" data-fouc required>
 								<option value=""></option>
-								<?php //foreach ($counter as $c) { ?>
-								<option value="<?//= $this->secure->enc($c->idx); ?>" ><?//= $c->counter_name; ?></option>
-								<?php //} ?>
+								<?php //foreach ($counter as $c) { 
+								?>
+								<option value="<? //= $this->secure->enc($c->idx); 
+												?>"><? //= $c->counter_name; 
+																						?></option>
+								<?php //} 
+								?>
 							</select>
 						</div>
 					</div>
 				</div>
-			    <div class="card-footer">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <button type="button" data-dismiss="modal" class="btn btn-outline-secondary">Close</button>
-                        <button type="submit" class="btn btn-info btn-ladda btn-ladda-spinner tBtn" data-spinner-color="#333" data-style="slide-down">changes Counter</button>
-                    </div>
+				<div class="card-footer">
+					<div class="d-flex justify-content-between align-items-center">
+						<button type="button" data-dismiss="modal" class="btn btn-outline-secondary">Close</button>
+						<button type="submit" class="btn btn-info btn-ladda btn-ladda-spinner tBtn" data-spinner-color="#333" data-style="slide-down">changes Counter</button>
+					</div>
 				</div>
 			</form>
 		</div>
@@ -231,7 +300,8 @@
                         <input type="hidden" name="tId" value="" />
                         <input type="hidden" name="tClCode" value="" />
                         <input type="hidden" name="tClId" value="" />
-                        <input type="hidden" name="csrf" value="<?//= $this->session->csrf_token; ?>" />
+                        <input type="hidden" name="csrf" value="<? //= $this->session->csrf_token; 
+																?>" />
                         <p class="text-center mt-3 mb-0 tContent"></p>
                     </div>
                     <div class="col-md-12">
@@ -274,7 +344,7 @@
 				<h3 class="modal-title" id="exampleModalLabel">Alert !!!</h3>
 			</div>
 			<div class="modal-body text-justify">
-        <h6 class="font-weight-semibold text-center infoPublish"></h6>
+				<h6 class="font-weight-semibold text-center infoPublish"></h6>
 			</div>
 			<div class="modal-footer">
 				<button type="button" data-dismiss="modal" class="btn btn-default bDismiss">No</button>

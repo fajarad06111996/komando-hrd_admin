@@ -2,7 +2,7 @@ let dataPass = document.currentScript.getAttribute('params');
 let password = '#*ettkHRD2024*#';
 let decrypted = CryptoJSAesJson.decrypt(dataPass, password);
 let dp = JSON.parse(decrypted);
-console.log(dp);
+// console.log(dp);
 document.body.classList.add("sidebar-collapse");
 var notif, submit;
 $(document).ready(function() {

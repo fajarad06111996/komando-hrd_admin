@@ -44,7 +44,7 @@
             </div>
             <div class="alert alert-success" style="display: none;"></div>
             <form action="<?= $formact; ?>" id="myForm" class="form-horizontal form-validasi" accept-charset="utf-8" enctype="multipart/form-data" method="post">
-                <div class="modal-body">
+            <div class="modal-body">
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="form-group row mb-1">

@@ -105,7 +105,7 @@
                         <th class="text-center">Aksi</th>
                         <th class="text-center">STATUS</th>
                         <th class="text-center">KARYAWAN</th>
-                        <th class="text-center">JABATAN</th>
+                        <th class="text-center">TANGGAL IJIN</th>
                         <th class="text-center">DESKRIPSI</th>
                     </tr>
                 </thead>
@@ -116,4 +116,4 @@
     </div>
 </div>
 <div id="insert_form"></div>
-<!-- <script src="<?= base_url(); ?>assets/layout1/js/core/v_position.js?v=0.1" params='<?= $params; ?>'></script> -->
+<script src="<?= base_url(); ?>assets/layout1/js/core/v_workpermission.js?v=0.1" params='<?= $params; ?>'></script>

@@ -187,7 +187,8 @@ class Organization extends AUTH_Controller
             $data['idx'] = null;
             $data['acc']      = [];
             $data['edit']       = 0;
-        }else{
+        }
+        else{
             $data['dataAkun']     = $this->mAccess->readtable('master_organization','*',array('status' => 1, 'company_id' => $this->office, 'status_delete' => 0),'','',array('organization_number' => 'asc'))->result();
             $data['subAcc']         = $this->mAccess->getData('master_organization','','','',array('status' => 1, 'company_id' => $this->office, 'idx <> '=>$idx, 'status_delete' => 0))->result();
             $data['allEmployee']    = $this->mAccess->getData('master_employee','','','',array('status' => 1, 'company_idx' => $this->office, 'status_delete' => 0))->result();
@@ -217,6 +218,7 @@ class Organization extends AUTH_Controller
         $params   		    = '{"base_url": "'.base_url().'", "link": "'.$this->link.'", "csrf": "'.$this->session->csrf_token.'", "permW": "'.$this->security_function->permissions($this->filename . "-w").'", "permC": "'.$this->security_function->permissions($this->filename . "-c").'", "permX": "'.$this->security_function->permissions($this->filename . "-x").'", "edit": "'.$data['edit'].'", "acc": "'.$cekAcc.'", "key_firebase": '.key_firebase().', "idx": "'.$id.'", "parent_idx": "'.$data['parent_idx'].'", "number_parent": "'.$data['number_parent'].'", "number_child": "'.$data['number_child'].'", "employee_id": "'.$data['employee_id'].'", "head_name": "'.$data['head_name'].'"}';
 		$encrypted 		    = CryptoJsAes::encrypt($params, $this->enkey);
 		$data['params']     = $encrypted;
+        $data['dataId']     = $id;
         $this->template->views('core/v_formorg', $data);
     }
     public function addAccount()
@@ -544,7 +546,8 @@ class Organization extends AUTH_Controller
                 $msg['text']    = 'Koneksi error,<br>Silahkan cek koneksi internet anda.';
                 echo json_encode($msg);die();
             }
-        }else{
+        }
+        else{
             $parent_idxx = html_escape(trim($this->input->post('parent_idx', TRUE)));
             $old_parent_idx = $this->secure->dec($parent_idxx);
             $count_segment = count($part_organization_number);
@@ -575,7 +578,8 @@ class Organization extends AUTH_Controller
                     'modified_on'                   => date("Y-m-d H:i:s")
                 ];
                 $updateChildNumber = "";
-            }else{
+            }
+            else{
                 if($own_segment == 0){
                     $parentWhere = [];
                     $updateParentAmount = [];
